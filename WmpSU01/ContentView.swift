@@ -8,9 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject
+    var model: WmpListModel = WmpListModel()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(model.banners, id: \.id) { banner in
+                    NavigationLink(destination: DetailView(banner: banner)) {
+                        VStack {
+                            Text(banner.bannerTitle)
+                            AsyncImage(url: URL(string: banner.pcImgUrl)!)
+                        }
+                    }
+//                    .listRowSeparator(.hidden)
+                }
+            }
+            .listStyle(.plain)
+            .navigationTitle("위메프")
+        }
+        .task {
+            await model.load()
+        }
+        .refreshable {
+            await model.load()
+        }
     }
 }
 

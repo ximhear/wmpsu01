@@ -20,6 +20,10 @@ struct DetailView: View {
             Text("userYn : \(String(banner.useYn))")
             Text("bannerGroupId : \(String(banner.bannerGroupId))")
             AsyncImage(url: URL(string: banner.pcImgUrl)!)
+                .cornerRadius(10)
+                .overlay(RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.purple, lineWidth: 18)
+                )
         }
         .navigationTitle(banner.bannerTitle)
     }

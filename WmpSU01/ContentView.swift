@@ -19,6 +19,7 @@ struct ContentView: View {
                         VStack {
                             Text(banner.bannerTitle)
                             AsyncImage(url: URL(string: banner.pcImgUrl)!)
+                                .cornerRadius(10)
                         }
                     }
 //                    .listRowSeparator(.hidden)

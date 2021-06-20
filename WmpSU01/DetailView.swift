@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
-    var banner: Banner
+    @State var banner: Banner
     var body: some View {
         VStack {
             if let desc = banner.bannerDesc {
@@ -19,11 +19,16 @@ struct DetailView: View {
             Text(banner.endDate)
             Text("userYn : \(String(banner.useYn))")
             Text("bannerGroupId : \(String(banner.bannerGroupId))")
-            AsyncImage(url: URL(string: banner.pcImgUrl)!)
-                .cornerRadius(10)
-                .overlay(RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.purple, lineWidth: 18)
-                )
+            NavigationLink(destination: WebDetailView(banner: banner)) {
+                VStack {
+                    AsyncImage(url: URL(string: banner.pcImgUrl)!)
+                        .cornerRadius(10)
+                        .overlay(RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Color.purple, lineWidth: 18)
+                        )
+                    Text("Go")
+                }
+           }
         }
         .navigationTitle(banner.bannerTitle)
     }

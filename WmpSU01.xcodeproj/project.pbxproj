@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ECD33C67267F988500244188 /* WebDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD33C66267F988500244188 /* WebDetailView.swift */; };
+		ECD33C69267F9D9700244188 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD33C68267F9D9700244188 /* WebView.swift */; };
 		ECF4A542267BCC3D00D43EBA /* WmpSU01App.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF4A541267BCC3D00D43EBA /* WmpSU01App.swift */; };
 		ECF4A544267BCC3D00D43EBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF4A543267BCC3D00D43EBA /* ContentView.swift */; };
 		ECF4A546267BCC3F00D43EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF4A545267BCC3F00D43EBA /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ECD33C66267F988500244188 /* WebDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDetailView.swift; sourceTree = "<group>"; };
+		ECD33C68267F9D9700244188 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		ECF4A53E267BCC3D00D43EBA /* WmpSU01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WmpSU01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF4A541267BCC3D00D43EBA /* WmpSU01App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WmpSU01App.swift; sourceTree = "<group>"; };
 		ECF4A543267BCC3D00D43EBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				ECF4A54F267BCD2E00D43EBA /* WmpListModel.swift */,
 				ECF4A545267BCC3F00D43EBA /* Assets.xcassets */,
 				ECF4A547267BCC3F00D43EBA /* Preview Content */,
+				ECD33C66267F988500244188 /* WebDetailView.swift */,
+				ECD33C68267F9D9700244188 /* WebView.swift */,
 			);
 			path = WmpSU01;
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 				ECF4A544267BCC3D00D43EBA /* ContentView.swift in Sources */,
 				ECF4A552267BD76700D43EBA /* DetailView.swift in Sources */,
 				ECF4A542267BCC3D00D43EBA /* WmpSU01App.swift in Sources */,
+				ECD33C69267F9D9700244188 /* WebView.swift in Sources */,
 				ECF4A550267BCD2E00D43EBA /* WmpListModel.swift in Sources */,
+				ECD33C67267F988500244188 /* WebDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

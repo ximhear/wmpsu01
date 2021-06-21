@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WebDetailView: View {
-    var banner: Banner
+    @Binding var banner: Banner
     var body: some View {
         
         VStack {
@@ -35,7 +35,7 @@ struct WebDetailView_Previews: PreviewProvider {
  "bgColor": "",
  "appLink": "",
  "pcImgUrl": "https://event.wd.wemakeprice.com/tour/icon/main/200924/pension.png",
- "pcLinkUrl": "https://tour.wd.wemakeprice.com/khotel/list/hotel?todaySpecial=1",
+ "pcLinkUrl": "https://m.daum.net",
  "pcLinkTarget": "Self",
  "pcBgColor": "",
  "sortNumber": 3,
@@ -47,8 +47,15 @@ struct WebDetailView_Previews: PreviewProvider {
 """
         let data = bannerStr.data(using: .utf8)
         let decoder = JSONDecoder()
-        let banner = try! decoder.decode(Banner.self, from: data!)
+        var banner = try! decoder.decode(Banner.self, from: data!)
         
-        WebDetailView(banner: banner)
+        let bbb = Binding<Banner>.init {
+            return banner
+        } set: { b in
+            banner = b
+        }
+       WebDetailView(banner: bbb)
+        //        let binding = Binding.constant(banner)
+        //        WebDetailView(banner: binding)
     }
 }

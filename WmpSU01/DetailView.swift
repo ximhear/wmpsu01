@@ -17,9 +17,9 @@ struct DetailView: View {
             Text(String(banner.sortNumber))
             Text(banner.startDate)
             Text(banner.endDate)
-            Text("userYn : \(String(banner.useYn))")
+            Text("useYn : \(String(banner.useYn))")
             Text("bannerGroupId : \(String(banner.bannerGroupId))")
-            NavigationLink(destination: WebDetailView(banner: banner)) {
+            NavigationLink(destination: WebDetailView(banner: $banner)) {
                 VStack {
                     AsyncImage(url: URL(string: banner.pcImgUrl)!)
                         .cornerRadius(10)
